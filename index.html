@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula sobre DOM</title>
+    <style>
+        .circulo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: red;
+            text-align: center;
+        }
+
+        .quadrado {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="titulo">Aula sobre manipulação de DOM</h1>
+    <div class="card">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore omnis corporis ut, vel aperiam quaerat, modi magni dolor doloremque vitae in et blanditiis ab explicabo laudantium nobis? Cum, doloremque minus.</p>
+    </div>
+    <div class="card">
+        <p>segundo parágrafo de exemplo</p>
+    </div>
+
+    <div class="forma-geometrica">
+        Forma geométrica
+    </div>
+
+    <script>
+        let h1 = document.querySelector("#titulo")
+        h1.style.color = 'red'
+        h1.style.backgroundColor = 'green'
+        h1.innerText = 'Olá queridos alunos do JMT'
+
+        let divCard = document.querySelector(".card")
+        console.log(divCard)
+        divCard.innerHTML = '<p>Texto alterado pelo DOM</p>'
+
+        let divFormaGeometrica = document.querySelector(".forma-geometrica")
+        divFormaGeometrica.classList.add("quadrado")
+        //divFormaGeometrica.classList.remove("quadrado")
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Farol</title>
+    <style>
+        .farol {
+            content: "";
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: rgb(46, 46, 46);
+        }
+        .farol-vermelho {
+            background-color: red;
+        }
+        .farol-verde {
+            background-color: green;
+        }
+        .farol-amarelo {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="farol"></div>
+    <button id="btnVermelho">Vermelho</button>
+    <button id="btnVerde">Verde</button>
+    <button id="btnAmarelo">Amarelo</button>
+
+    <script>
+        let btnVermelho = document.querySelector("#btnVermelho")
+        let btnVerde = document.querySelector("#btnVerde")
+        let btnAmarelo = document.querySelector("#btnAmarelo")
+
+        let divFarol = document.querySelector(".farol")
+
+        btnVermelho.addEventListener("click", function () {
+            divFarol.classList.remove("farol-amarelo")
+            divFarol.classList.remove("farol-verde")
+            divFarol.classList.add("farol-vermelho")
+        })
+
+        btnVerde.addEventListener("click", function () {
+            divFarol.classList.remove("farol-vermelho")
+            divFarol.classList.remove("farol-amarelo")
+            divFarol.classList.add("farol-verde")
+        })
+
+        btnAmarelo.addEventListener("click", function () {
+            divFarol.classList.remove("farol-vermelho")
+            divFarol.classList.remove("farol-verde")
+            divFarol.classList.add("farol-amarelo")
+        })
+    </script>
+</body>
+</html>

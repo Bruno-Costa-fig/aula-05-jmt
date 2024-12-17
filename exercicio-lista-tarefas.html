@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício lista de tarefas</title>
+</head>
+<body>
+    <form id="formulario">
+        <label for="tarefa">Digite a tarefa:</label>
+        <input type="text" id="tarefa" />
+        <button type="submit">Cadastrar</button>
+    </form>
+    <ul id="lista-tarefas"></ul>
+
+    <script>
+        let formulario = document.querySelector("#formulario")
+
+        formulario.addEventListener("submit", function (evento){
+            evento.preventDefault()
+
+            let tarefa = document.querySelector("#tarefa")
+
+            let li = document.createElement("li")
+            li.innerText = tarefa.value
+
+            let listaTarefas = document.querySelector("#lista-tarefas")
+            listaTarefas.appendChild(li)
+
+            tarefa.value = ""
+        })
+    </script>
+</body>
+</html>
